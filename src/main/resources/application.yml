@@ -1,0 +1,14 @@
+logging:
+  level:
+    web: debug
+  pattern:
+    level: '%5p [traceId=%X{traceId:-}, spanId=%X{spanId:-}]'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - metrics
+          - prometheus
